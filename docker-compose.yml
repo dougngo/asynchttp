@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  http:
+    build: .
+    container_name: http_proxy
+    command: python gevent_wsgi.py
+
+    volumes:
+      - .:/code
+    ports:
+      - 8080:80
+    logging:
+      options:
+        max-size: "500k"
+        max-file: "5"

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+  <div>
+    <h1>Bytes streamed:</h1>
+    <div>{{stats.get_bytes_streamed()}}</div>
+  </div>
+  <div>
+    <h1>Up Time:</h1>
+    <div>{{stats.get_process_uptime_formatted()['uptime']}}</div>
+  </div>
+  <div>
+    <h1>Process started on:</h1>
+    <div>{{stats.get_process_uptime_formatted()['start_time']}}</div>
+  </div>
+</body>
+</html>
